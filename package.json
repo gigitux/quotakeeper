@@ -1,0 +1,29 @@
+{
+  "name": "quota-keeper",
+  "version": "0.1.0",
+  "private": true,
+  "bin": {
+    "quota-keeper": "./dist/cli.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "format": "oxfmt --write 'src/**/*.ts' 'test/**/*.ts' 'scripts/**/*.mjs' '*.json' 'skills/**/*.md' 'skills/**/*.yaml'",
+    "format:check": "oxfmt --check 'src/**/*.ts' 'test/**/*.ts' 'scripts/**/*.mjs' '*.json' 'skills/**/*.md' 'skills/**/*.yaml'",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsc -p tsconfig.test.json && node --test dist-test/test/*.test.js",
+    "validate:skill": "node scripts/validate-skill.mjs skills/quota-goal-supervisor",
+    "validate:plugin": "node scripts/validate-plugin.mjs .",
+    "clean": "rm -rf dist dist-test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "oxfmt": "^0.56.0",
+    "oxlint": "^1.71.0",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.0"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

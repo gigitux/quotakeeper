@@ -1,0 +1,18 @@
+{
+  "name": "quota-keeper",
+  "version": "0.1.0+codex.20260622215656",
+  "description": "QuotaKeeper protects long-running Codex Goals with explicit .goalkeeper quota usage limits, checkpointing progress, pausing near quota exhaustion, and optionally restarting when capacity returns.",
+  "skills": "./skills/",
+  "author": {
+    "name": "QuotaKeeper"
+  },
+  "interface": {
+    "displayName": "QuotaKeeper",
+    "shortDescription": "Pause and restart Codex Goals before quota exhaustion.",
+    "longDescription": "QuotaKeeper reads .goalkeeper from the supervised Codex project or asks for explicit 5-hour quota usage percent, weekly quota usage percent, and manual/automatic restart mode. It monitors Codex rate-limit capacity, not token-context usage, checkpoints progress, pauses long-running Goals before quota exhaustion, marks Goals blocked when required policy answers are missing, and optionally restarts them when capacity returns.",
+    "developerName": "QuotaKeeper",
+    "category": "Productivity",
+    "capabilities": ["Goal supervision", "Quota-aware pause policies", "Checkpointed restart"],
+    "defaultPrompt": "Use QuotaKeeper to read .goalkeeper from the supervised Codex project, or ask for explicit 5-hour quota usage percent, weekly quota usage percent, and manual/automatic restart mode. This is Codex quota/rate-limit usage, not token-context usage. Do not infer defaults. If the user has not provided all three answers, tell them what is missing, then use the native Goal-control tool to mark the active Goal blocked instead of continuing the loop. Then monitor this Goal and pause or restart it according to that policy."
+  }
+}

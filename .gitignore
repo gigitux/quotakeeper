@@ -1,0 +1,30 @@
+node_modules/
+
+# Test/build scratch output. Keep dist/ tracked because the skill wrapper runs it.
+dist-test/
+
+# QuotaKeeper runtime state.
+.quota-keeper/
+
+# Logs and diagnostics.
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local environment files.
+.env
+.env.*
+!.env.example
+
+# OS/editor noise.
+.DS_Store
+.idea/
+.vscode/
+
+# TypeScript/cache output.
+*.tsbuildinfo
+.cache/
+.turbo/
+.pnpm-store

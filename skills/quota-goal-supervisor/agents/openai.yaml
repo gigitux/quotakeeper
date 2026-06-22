@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quota Goal Supervisor"
+  short_description: "Supervise Codex Goals with QuotaKeeper."
+  default_prompt: "Use QuotaKeeper to read .goalkeeper from the supervised Codex project, or ask for explicit 5-hour usage percent, weekly usage percent, and manual/automatic restart mode. This is Codex quota/rate-limit usage, not token-context usage. Do not infer defaults. If the user has not provided all three answers, tell them what is missing, then use the native Goal-control tool to mark the active Goal blocked instead of continuing the loop. Then monitor this Goal and pause or restart it according to that policy."
